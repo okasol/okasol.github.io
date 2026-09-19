@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="屋面隔热专业指南，提供高效隔热方案、材料对比、施工工艺及节能环保建议，帮助您降低建筑能耗，提升居住舒适度。">
+    <meta name="keywords" content="屋面隔热,屋顶保温,建筑节能,隔热材料,平改坡,厂房隔热">
+    <title>屋面隔热-建筑节能解决方案与施工指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #27ae60;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --text-secondary: #666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background-color: #219150;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .problem-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-card h3 {
+            margin-bottom: 15px;
+            color: #c0392b;
+        }
+
+        /* Solutions Section */
+        .solutions-section {
+            padding: 80px 0;
+            background-color: #f4f6f7;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .solution-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .solution-item:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .solution-icon {
+            height: 150px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .solution-content {
+            padding: 20px;
+        }
+
+        .solution-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .solution-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Material Comparison */
+        .comparison-section {
+            padding: 80px 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .check {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>◆</span> 屋面隔热专家
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#materials">材料对比</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">获取免费方案</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>告别高温酷暑，打造凉爽屋面</h1>
+                <div class="hero-tags">
+                    <span class="tag">平改坡</span>
+                    <span class="tag">厂房隔热</span>
+                    <span class="tag">节能降耗</span>
+                    <span class="tag">屋顶保温</span>
+                </div>
+                <p>针对现代建筑热环境问题，提供从材料选择、结构设计到施工工艺的全套屋面隔热解决方案。有效降低室内温度 5-8℃，减少空调能耗，提升建筑舒适度。</p>
+                <a href="#solutions" class="cta-btn" style="background-color: white; color: var(--primary-color);">探索隔热方案</a>
+            </div>
+        </section>
+
+        <section class="problem-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么您的屋顶需要隔热？</h2>
+                    <p>忽视屋面隔热不仅影响居住舒适度，还会带来长期的经济损失</p>
+                </div>
+                <div class="problem-grid">
+                    <article class="problem-card">
+                        <h3>❌ 室内闷热不通风</h3>
+                        <p>夏季顶层房间温度常高于室外 5-10℃，阳光直射导致热量通过屋面大量传导，空调负荷激增，室内空气沉闷。</p>
+                    </article>
+                    <article class="problem-card">
+                        <h3>❌ 建筑结构受损</h3>
+                        <p>昼夜温差大，混凝土和防水层易产生热胀冷缩，导致裂缝、起鼓甚至渗漏，缩短建筑使用寿命。</p>
+                    </article>
+                    <article class="problem-card">
+                        <h3>❌ 能源浪费严重</h3>
+                        <p>普通隔热层保温性能不足，空调需长时间高频运转，每月电费增加 30% 以上，不符合绿色建筑标准。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="solutions-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>主流屋面隔热技术</h2>
+                    <p>根据您的建筑类型和预算，选择最适合的隔热层</p>
+                </div>
+                <div class="solution-grid">
+                    <div class="solution-item">
+                        <div class="solution-icon">🏠</div>
+                        <div class="solution-content">
+                            <h3>种植屋面（绿色屋面）</h3>
+                            <p>在屋顶种植植被，利用植物蒸腾作用降温，同时提供保温隔热层。适合新建住宅或公共建筑。</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🌊</div>
+                        <div class="solution-content">
+                            <h3>反射隔热涂料</h3>
+                            <p>喷涂高反射率涂料，将太阳辐射热反射回大气。施工简便，成本低，适合老旧屋面改造。</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🧊</div>
+                        <div class="solution-content">
+                            <h3>挤塑聚苯板（XPS）</h3>
+                            <p>闭孔结构，导热系数低，抗压强度高。是目前最常用的平屋面保温材料，耐久性好。</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">⚙️</div>
+                        <div class="solution-content">
+                            <h3>架空隔热层</h3>
+                            <p>在屋面设置通风空气间层，利用热空气上升排出带走热量。适用于炎热多风的地区。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="materials" class="comparison-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见隔热材料性能对比</h2>
+                    <p>科学选材是隔热效果的关键</p>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>材料类型</th>
+                            <th>导热系数 (W/m·K)</th>
+                            <th>适用场景</th>
+                            <th>施工难度</th>
+                            <th>性价比</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>岩棉板</td>
+                            <td>0.038 - 0.045</td>
+                            <td>厂房、大型仓库、防火要求高场所</td>
+                            <td>中等</td>
+                            <td>高</td>
+                        </tr>
+                        <tr>
+                            <td>挤塑聚苯板 (XPS)</td>
+                            <td>0.028 - 0.030</td>
+                            <td>平屋面、卫生间、冷库、地面</td>
+                            <td>低</td>
+                            <td>中等</td>
+                        </tr>
+                        <tr>
+                            <td>聚氨酯发泡 (PU)</td>
+                            <td>0.022 - 0.024</td>
+                            <td>异形屋面、复杂结构、快速施工</td>
+                            <td>高（需专业设备）</td>
+                            <td>中等</td>
+                        </tr>
+                        <tr>
+                            <td>珍珠岩隔热板</td>
+                            <td>0.050 - 0.060</td>
+                            <td>一般平屋面、简易建筑</td>
+                            <td>低</td>
+                            <td>高</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答 (FAQ)</h2>
+                    <p>解答您关于屋面隔热施工中的疑虑</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">屋面隔热层施工需要多久？</div>
+                    <div class="faq-answer">
+                        施工时间取决于屋面面积和所选材料。普通反射涂料喷涂通常 1-2 天可完成 100 平方米；铺设挤塑板加砂浆保护层通常需要 3-5 天。种植屋面涉及土建和绿化，工期较长。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">老房子做屋面隔热会影响层高吗？</div>
+                    <div class="faq-answer">
+                        会有一定影响。平屋面加装保温层会增加 5-10cm 的厚度。如果是坡屋面，通常采用内保温或吊顶方式，对层高影响较小。建议在改造前进行精确测量。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">隔热层做好了还需要做防水吗？</div>
+                    <div class="faq-answer">
+                        需要。隔热层的主要作用是阻隔热量，而防水层的作用是防止水渗漏。两者功能不同，必须配合使用。隔热层还能延长防水层的使用寿命。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">哪种隔热材料最环保？</div>
+                    <div class="faq-answer">
+                        种植屋面是最环保的，但成本最高。岩棉和玻璃棉属于无机材料，可回收，不易燃。聚氨酯发泡在环保性能上相对较弱，需选择符合国家环保标准的低挥发性产品。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="padding: 60px 0; background: white; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px; color: var(--primary-color);">需要专业施工建议？</h2>
+                <p style="margin-bottom: 30px; color: var(--text-secondary);">我们的工程师团队可以为您提供免费的现场勘测和方案设计。</p>
+                <button class="cta-btn" onclick="alert('感谢您的关注。在实际应用中，此处应跳转至咨询表单或客服系统。')">在线咨询 / 预约测量</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">专注于建筑节能领域，致力于为各类建筑提供高效、耐用的屋面隔热解决方案。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>服务项目</h4>
+                    <ul>
+                        <li><a href="#">平改坡工程</a></li>
+                        <li><a href="#">厂房保温改造</a></li>
+                        <li><a href="#">防水补漏</a></li>
+                        <li><a href="#">绿色屋顶设计</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">施工案例</a></li>
+                        <li><a href="#">材料百科</a></li>
+                        <li><a href="#">政策法规</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：service@roof-insulation.com</li>
+                        <li>地址：北京市朝阳区建材城路88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 屋面隔热专家网 版权所有 | 本站内容仅供参考，具体施工请咨询专业人士
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
