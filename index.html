@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="少年儿童读物精选平台，提供绘本、科普、童话、经典文学等适合儿童阅读的优质书籍推荐。涵盖3-12岁分龄阅读指南、亲子共读技巧及儿童文学热门榜单。">
+    <meta name="keywords" content="少年儿童读物,儿童书籍推荐,绘本阅读,科普读物,童话故事,分龄阅读指南">
+    <title>少年儿童读物-优质儿童书籍推荐与分龄阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --accent-color: #50e3c2;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9fbfd;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .search-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .search-btn:hover {
+            background-color: #357abd;
+            color: var(--white);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(74, 144, 226, 0.1);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 分龄指南 */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .age-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .age-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid transparent;
+        }
+
+        .age-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .age-card.age-3 { border-top-color: #ff6b6b; }
+        .age-card.age-5 { border-top-color: #feca57; }
+        .age-card.age-8 { border-top-color: #48dbfb; }
+        .age-card.age-12 { border-top-color: #1dd1a1; }
+
+        .age-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .age-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .age-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .age-card a {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* 热门分类 */
+        .category-section {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .category-item {
+            position: relative;
+            height: 160px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .category-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .category-overlay h3 {
+            color: var(--white);
+            font-size: 18px;
+        }
+
+        /* 阅读榜单 */
+        .ranking-section {
+            padding: 60px 0;
+        }
+
+        .ranking-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .book-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .book-item {
+            display: flex;
+            background: var(--white);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            align-items: center;
+        }
+
+        .book-rank {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ddd;
+            width: 40px;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .book-rank.top-1 { color: #ff4757; }
+        .book-rank.top-2 { color: #ffa502; }
+        .book-rank.top-3 { color: #2ed573; }
+
+        .book-cover {
+            width: 60px;
+            height: 80px;
+            border-radius: 4px;
+            object-fit: cover;
+            margin-right: 20px;
+            background-color: #eee;
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .book-meta {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .book-tags span {
+            display: inline-block;
+            font-size: 12px;
+            padding: 2px 8px;
+            background-color: #f0f2f5;
+            border-radius: 4px;
+            margin-right: 5px;
+            color: var(--text-light);
+        }
+
+        .sidebar-box {
+            background: var(--white);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-box h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* 亲子阅读小贴士 */
+        .tips-section {
+            background-color: #fff8e1;
+            padding: 60px 0;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .tip-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 193, 7, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .tip-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .tip-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 900px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .ranking-layout {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>阅童书</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#age-guide">分龄指南</a>
+                <a href="#categories">分类浏览</a>
+                <a href="#rankings">热门榜单</a>
+                <a href="#tips">阅读技巧</a>
+            </nav>
+            <a href="#" class="search-btn">搜索书籍</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>发现适合孩子的每一本书</h1>
+                <p>为3-12岁儿童精选优质少年儿童读物，涵盖绘本、科普、文学与益智，助力孩子爱上阅读，快乐成长。</p>
+                <div class="hero-tags">
+                    <span class="tag">经典绘本</span>
+                    <span class="tag">自然科学</span>
+                    <span class="tag">桥梁书</span>
+                    <span class="tag">历史故事</span>
+                    <span class="tag">文学名著</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分龄阅读指南 -->
+        <section id="age-guide" class="container">
+            <div class="section-title">
+                <h2>分龄阅读指南</h2>
+                <p>根据儿童认知发展规律，为孩子挑选最合适的读物</p>
+            </div>
+            <div class="age-grid">
+                <article class="age-card age-3">
+                    <span class="age-icon">🧸</span>
+                    <h3>3-4岁 启蒙期</h3>
+                    <p>以图画为主，文字简单，注重亲子互动与感官认知，培养阅读兴趣。</p>
+                    <a href="#">查看推荐 &rarr;</a>
+                </article>
+                <article class="age-card age-5">
+                    <span class="age-icon">🎨</span>
+                    <h3>5-6岁 想象期</h3>
+                    <p>故事情节开始丰富，注重想象力与情绪认知，开始尝试独立阅读短句。</p>
+                    <a href="#">查看推荐 &rarr;</a>
+                </article>
+                <article class="age-card age-8">
+                    <span class="age-icon">🔍</span>
+                    <h3>7-9岁 过渡期</h3>
+                    <p>从图画书转向文字书，注重逻辑思维与知识探索，适合桥梁书阅读。</p>
+                    <a href="#">查看推荐 &rarr;</a>
+                </article>
+                <article class="age-card age-12">
+                    <span class="age-icon">🚀</span>
+                    <h3>10-12岁 阅读期</h3>
+                    <p>阅读长篇文学与科普作品，注重批判性思维与价值观培养。</p>
+                    <a href="#">查看推荐 &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 分类浏览 -->
+        <section id="categories" class="category-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热门分类</h2>
+                    <p>探索不同类型的少年儿童读物，满足多样化阅读需求</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/book1/300/200" alt="绘本故事">
+                        <div class="category-overlay">
+                            <h3>绘本故事</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/science/300/200" alt="科普百科">
+                        <div class="category-overlay">
+                            <h3>科普百科</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/history/300/200" alt="历史人文">
+                        <div class="category-overlay">
+                            <h3>历史人文</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/fairy/300/200" alt="童话寓言">
+                        <div class="category-overlay">
+                            <h3>童话寓言</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门榜单 -->
+        <section id="rankings" class="ranking-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>年度热门榜单</h2>
+                    <p>家长与孩子共同喜爱的优秀少年儿童读物</p>
+                </div>
+                <div class="ranking-layout">
+                    <div class="book-list">
+                        <article class="book-item">
+                            <span class="book-rank top-1">1</span>
+                            <img src="https://picsum.photos/seed/book2/100/140" alt="书籍封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title">小王子：经典绘本版</h3>
+                                <p class="book-meta">安托万·德·圣埃克苏佩里 / 著</p>
+                                <div class="book-tags">
+                                    <span>哲理</span>
+                                    <span>童话</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="book-item">
+                            <span class="book-rank top-2">2</span>
+                            <img src="https://picsum.photos/seed/book3/100/140" alt="书籍封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title">神奇校车：桥梁书版</h3>
+                                <p class="book-meta">乔安娜·柯尔 / 著</p>
+                                <div class="book-tags">
+                                    <span>科普</span>
+                                    <span>冒险</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="book-item">
+                            <span class="book-rank top-3">3</span>
+                            <img src="https://picsum.photos/seed/book4/100/140" alt="书籍封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title">哈利·波特与魔法石</h3>
+                                <p class="book-meta">J.K. 罗琳 / 著</p>
+                                <div class="book-tags">
+                                    <span>奇幻</span>
+                                    <span>冒险</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="book-item">
+                            <span class="book-rank">4</span>
+                            <img src="https://picsum.photos/seed/book5/100/140" alt="书籍封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title">安徒生童话全集</h3>
+                                <p class="book-meta">安徒生 / 著</p>
+                                <div class="book-tags">
+                                    <span>经典</span>
+                                    <span>文学</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <aside>
+                        <div class="sidebar-box">
+                            <h3>常见问题</h3>
+                            <div class="faq-item">
+                                <span class="faq-question">如何选择适合孩子年龄的书？</span>
+                                <p class="faq-answer">参考我们的分龄指南，3-4岁看图，5-6岁看故事，7岁以上可尝试文字较多的书籍。</p>
+                            </div>
+                            <div class="faq-item">
+                                <span class="faq-question">电子书和纸质书哪个好？</span>
+                                <p class="faq-answer">纸质书更有利于保护视力，且便于孩子翻阅和书写批注；电子书携带方便，适合外出。</p>
+                            </div>
+                            <div class="faq-item">
+                                <span class="faq-question">如何培养孩子的阅读习惯？</span>
+                                <p class="faq-answer">每天固定时间阅读，父母陪伴阅读，并鼓励孩子复述故事内容。</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- 亲子阅读小贴士 -->
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>亲子阅读小贴士</h2>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">📖</div>
+                        <h3>固定阅读时间</h3>
+                        <p>每天睡前15-20分钟是亲子阅读的黄金时间，能帮助孩子建立规律。</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🗣️</div>
+                        <h3>互动式阅读</h3>
+                        <p>不要只读文字，多问“为什么”、“接下来会发生什么”，引导孩子思考。</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">❤️</div>
+                        <h3>营造氛围</h3>
+                        <p>在安静舒适的环境下阅读，准备舒适的靠垫和台灯，让阅读成为一种享受。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>阅童书</h4>
+                    <p>致力于为0-12岁儿童提供最专业的阅读指导与优质书籍推荐，陪伴孩子快乐阅读，启迪智慧人生。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读指南</h4>
+                    <ul>
+                        <li><a href="#">0-3岁启蒙</a></li>
+                        <li><a href="#">4-6岁绘本</a></li>
+                        <li><a href="#">7-9岁桥梁书</a></li>
+                        <li><a href="#">10-12岁文学</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站介绍</a></li>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 阅童书少年儿童读物推荐平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
