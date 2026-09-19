@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险村物语装备攻略：提供游戏内装备获取途径、武器强化技巧、防具属性分析与稀有装备掉落地点详解，助您打造最强冒险者队伍。">
+    <meta name="keywords" content="冒险村物语装备攻略, 冒险村物语, 游戏攻略, 装备强化, 武器推荐">
+    <title>冒险村物语装备攻略-顶级武器与防具获取强化指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --accent-color: #CD853F;
+            --bg-color: #F5F5DC;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0E0E0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/adventure/1600/600.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Content Layout */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Main Content */
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .article-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .article-card p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #FFF8DC;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+
+        /* Equipment Table */
+        .equipment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .equipment-table th, .equipment-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .equipment-table th {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .equipment-table tr:nth-child(even) {
+            background-color: #FAFAFA;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-main);
+        }
+
+        .guide-list a:hover {
+            color: var(--secondary-color);
+        }
+
+        .guide-list span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #aaa;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--accent-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                display: none; /* Simplification for mobile view */
+            }
+
+            .header-content {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>⚔️</span> 冒险村物语攻略站
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">新手入门</a></li>
+                    <li><a href="#">建筑攻略</a></li>
+                    <li><a href="#">装备指南</a></li>
+                    <li><a href="#">角色培养</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>冒险村物语装备攻略</h1>
+            <p>从新手村的破旧铁剑到传说级的神兵利器，掌握装备强化与获取的核心技巧，打造无坚不摧的冒险者团队。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="content-grid">
+            <!-- Main Content Area -->
+            <div class="main-content">
+                
+                <article class="article-card">
+                    <h2>一、装备获取途径详解</h2>
+                    <p>在《冒险村物语》中，装备是提升冒险者战斗力的核心要素。游戏内的装备主要分为以下几类获取方式：</p>
+                    <div class="highlight-box">
+                        <strong>1. 商店购买</strong><br>
+                        游戏初期，冒险者公会和道具店会出售基础装备。随着村庄等级提升，商店刷新率会增加，高级装备的售价也会随之上涨。
+                    </div>
+                    <p><strong>2. 探险掉落</strong><br>
+                        随着冒险者派遣至不同难度的地下城，他们有几率带回稀有装备。装备的品质通常与地下城的深度和难度成正比。建议优先派遣高等级冒险者挑战高难度副本，以提高掉落率。</p>
+                    <p><strong>3. 建筑产出</strong><br>
+                        建造“宝物库”或“锻造屋”可以显著提高特定类型装备的产出概率。此外，通过完成特定的“传说任务”，玩家可以直接获得独特的限定装备。</p>
+                </article>
+
+                <article class="article-card">
+                    <h2>二、武器强化与附魔指南</h2>
+                    <p>拥有好装备只是开始，如何让装备发挥最大威力才是关键。游戏提供了完善的强化系统：</p>
+                    <ul>
+                        <li><strong>强化等级限制：</strong> 武器的强化等级通常受到冒险者等级和村庄等级的双重限制。例如，+5 强化通常需要冒险者达到Lv.20以上。</li>
+                        <li><strong>强化成功率：</strong> 强化存在失败风险，失败可能导致装备耐久度下降或品质降级。建议在强化前使用“幸运药水”或“强化保护石”来降低风险。</li>
+                        <li><strong>附魔属性：</strong> 强化到一定阶段（如+10），武器会解锁附魔槽。通过消耗金币和稀有矿石，可以为武器增加攻击力、暴击率或特殊元素伤害。</li>
+                    </ul>
+                </article>
+
+                <article class="article-card">
+                    <h2>三、热门装备推荐表</h2>
+                    <p>针对不同职业的冒险者，以下是游戏后期的热门装备搭配建议：</p>
+                    <table class="equipment-table">
+                        <thead>
+                            <tr>
+                                <th>职业</th>
+                                <th>推荐武器</th>
+                                <th>推荐防具</th>
+                                <th>核心属性</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>战士</td>
+                                <td>巨人之斧</td>
+                                <td>龙鳞铠甲</td>
+                                <td>高攻击、生命值加成</td>
+                            </tr>
+                            <tr>
+                                <td>法师</td>
+                                <td>秘银法杖</td>
+                                <td>法师长袍</td>
+                                <td>魔法攻击、魔力恢复</td>
+                            </tr>
+                            <tr>
+                                <td>盗贼</td>
+                                <td>影刃</td>
+                                <td>轻甲</td>
+                                <td>暴击率、闪避率</td>
+                            </tr>
+                            <tr>
+                                <td>神官</td>
+                                <td>圣光权杖</td>
+                                <td>神官服</td>
+                                <td>治疗效果、精神力</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <section class="faq-section">
+                    <h2 class="section-title">常见问题 (FAQ)</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 装备强化失败后装备会消失吗？</div>
+                        <div class="faq-answer">A: 在游戏当前版本中，强化失败通常只扣除耐久度或金币，装备本身不会消失。但请注意使用保护道具以防万一。</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 如何快速获得+10以上的武器？</div>
+                        <div class="faq-answer">A: 建议集中资源培养一名主力输出角色，利用“幸运药水”和“强化保护石”进行多次强化尝试。同时，关注每日任务奖励的稀有材料。</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Q: 不同颜色的装备有什么区别？</div>
+                        <div class="faq-answer">A: 装备颜色通常代表其稀有度（如白色、绿色、蓝色、紫色、橙色），颜色越深，基础属性和附加词条通常越好。</div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3>装备分类导航</h3>
+                    <ul class="guide-list">
+                        <li><a href="#">🗡️ 武器大全</a> <span>更新于昨日</span></li>
+                        <li><a href="#">🛡️ 防具详解</a> <span>更新于3天前</span></li>
+                        <li><a href="#">💍 饰品与道具</a> <span>更新于1周前</span></li>
+                        <li><a href="#">✨ 附魔材料图鉴</a> <span>更新于2周前</span></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>热门攻略合集</h3>
+                    <ul class="guide-list">
+                        <li><a href="#">如何快速提升村庄等级</a> <span>热门</span></li>
+                        <li><a href="#">全图鉴解锁条件</a> <span>必看</span></li>
+                        <li><a href="#">稀有怪物出现时间表</a> <span>实用</span></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>社区讨论</h3>
+                    <p style="font-size: 0.9rem; color: #666;">加入我们的玩家群，分享你的装备强化心得与心得。</p>
+                    <button style="margin-top: 10px; padding: 8px 15px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%;">加入讨论组</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 冒险村物语攻略站. All Rights Reserved.</p>
+            <p>本站为玩家攻略整理，非官方网站。游戏版权归开发商所有。</p>
+            <p>
+                <a href="#">关于我们</a> | 
+                <a href="#">联系方式</a> | 
+                <a href="#">免责声明</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
